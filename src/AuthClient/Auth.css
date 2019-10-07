@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth:700&display=swap');
+
+.background-image {
+    background: url('./img/background-image-volley.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.background-image-logIn {
+    background: url('./img/background-image-volley-login.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/********************************************
+
+            EDITING TEXT AREA
+
+********************************************/
+
+h1 {
+    text-align: center;
+    margin: 0px;
+    color: blue;
+    font-family: 'Amaranth', sans-serif;
+}
+
+p {
+    margin: 0px;
+}
+
+.text-area {
+    color: gray;
+}
+
+.text-area-title {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#txt-one {
+    font-size: 60px;
+}
+
+#txt-two {
+    font-size: 90px;
+}
+
+#txt-tree {
+    font-size: 50px;
+}
+
+/*******************************************/
+
+.input-inscription {
+    height: 50px;
+    width: 100%;
+}
+
+.spacing-container {
+    height: 30%;
+}
+
+.centrer {
+    display: flex;
+    justify-content: center;
+}
+
+.button-insc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-form-connexion {
+    margin-top: 10vh;
+    padding: 10px;
+}

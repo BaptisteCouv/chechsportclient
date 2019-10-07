@@ -1,0 +1,32 @@
+body {
+    background-color: #F4F4F4;
+}
+
+.background-wallpaper {
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header-img-edit {
+    background: url('./HomeClient/imgHomeClient/wallpaper.png');
+    background-repeat: no-repeat;
+    height: 250px;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.navbar-form{
+    background-color: #F4F4F4;
+}    
+
+.navbar-title {
+    color: blue;
+    margin-left: 20px;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 30px;
+}
