@@ -3,40 +3,13 @@ import "./Auth.css";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
+import { logIn } from "../services/FetchBackend";
+import { withRouter, Link } from "react-router-dom";
 
-async function logIn(event, email, password) {
-  // l'envoie du formumaire ne vas pas s'envoyer grace au preventdefault
-  event.preventDefault();
-
-  // 2 solutions pour l'authentification :
-  // - Json Web Token ( standard API )
-  // - Custom ( vérification simple de username/password et stockage en local storage de l'identification )
-  let response = await fetch("http://127.0.0.1:8000/api/login_check", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    method: "POST",
-    body: JSON.stringify({
-      username: email,
-      password: password
-    })
-  });
-
-  try {
-    let jsonResponse = await response.json();
-    console.log(jsonResponse);
-  } catch (error) {
-    console.log(error, response);
-  }
-
-  //  localStorage.setItem("token", jsonResponse.token)
-}
-
-export default function() {
+const LogIn = function({ history }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   return (
     <div className="background-image-logIn">
@@ -47,9 +20,8 @@ export default function() {
           <div className="container-form-connexion">
             <h1>CONNEXION</h1>
             <form
-              action="http://127.0.0.1:8000/connection"
               method="post"
-              onSubmit={event => logIn(event, email, password)}
+              onSubmit={event => logIn(event, email, password, setErrorMessage, history)}
             >
               <TextField
                 id="outlined-mail"
@@ -74,6 +46,7 @@ export default function() {
                 required
                 onChange={event => setPassword(event.target.value)}
               />
+              <div style={{color:'red', fontSize:'15px'}}>{errorMessage}</div>
 
               <div className="centrer button-insc">
                 <Button
@@ -103,3 +76,5 @@ export default function() {
     </div>
   );
 }
+
+export default withRouter(LogIn)

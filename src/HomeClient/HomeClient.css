@@ -1,7 +1,8 @@
 .card-match{
-    background-color: aqua;
-    height: 150px;
-    margin: 30px;
+    height: 300px;
+    background-color: white;
+    margin-top: 30px;
+    margin: 10px;
 }
 
 .grid-card-section {
@@ -12,4 +13,37 @@
 
 .grid-card-section-button {
     padding: 20px;
+}
+
+.container-home-client {
+}
+
+.style-line-border {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.modal-home-client{
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.style-material-icon-add {
+    margin-left: 10px;
+}
+
+.testtest{
+    text-align: center;
+}
+
+.card-match-header {
+    margin-top: 20px;
 }

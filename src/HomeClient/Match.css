@@ -1,0 +1,19 @@
+.match-container {
+    background-color: aqua; 
+    height: 500px;
+}
+
+.testtest {
+    background-color: red;
+    width: 300px;
+}
+
+.card-match-bar {
+ background-color: green;
+ padding-top: 20px;
+}
+
+/* 
+1étape récupérer la méthode du controller
+
+*/

@@ -7,29 +7,29 @@ import { Link } from "react-router-dom";
 
 
 export default function Auth() {
-const [name, setName] = useState("");
-const [firstName, setFirstName] = useState("");
-const [mail, setMail] = useState("");
-const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [mail, setMail] = useState("");
+  const [password, setPassword] = useState("");
 
-let jesaispasenorelenom = {
-  name: name,
-  firstName: firstName,
-  mail: mail,
-  password: password
-};
+  let jesaispasenorelenom = {
+    name: name,
+    firstName: firstName,
+    mail: mail,
+    password: password
+  };
 
-// async function auth(e) {
-//   console.log(e);
-//     e.preventDefault();
+  // async function auth(e) {
+  //   console.log(e);
+  //     e.preventDefault();
 
-//     /* let test = new FormData()
+  //     /* let test = new FormData()
 async function traitementConnection(e) {
   e.preventDefault();
   // 2 solutions pour l'authentification :
   // - Json Web Token ( standard API )
   // - Custom ( vérification simple de username/password et stockage en local storage de l'identification )
-  let response = await fetch("http://127.0.0.1:8000/auth", {
+  let response = await fetch("http://127.0.0.1:8000/api/register", {
     mode: "no-cors",
     method: "POST",
     body: "jesaispasenorelenom"
